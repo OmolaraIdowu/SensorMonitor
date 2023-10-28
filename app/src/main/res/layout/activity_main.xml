@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/sensorHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/sensor_monitor"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sensorListText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sensors_available_on_this_phone"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sensorHeader" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sensorCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sensorListText">
+
+        <TextView
+            android:id="@+id/sensorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:padding="6dp"
+            tools:text="@tools:sample/lorem" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/lightSensorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/light"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sensorCardView" />
+
+    <TextView
+        android:id="@+id/lightSensorText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lightSensorText" />
+
+    <com.skydoves.progressview.ProgressView
+        android:id="@+id/lightBar"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lightSensorText2"
+        app:progressView_animation="accelerateDecelerate"
+        app:progressView_autoAnimate="true"
+        app:progressView_colorBackground="@color/grey"
+        app:progressView_colorProgress="?colorPrimary"
+        app:progressView_labelSize="16sp"
+        app:progressView_labelTypeface="bold"
+        app:progressView_max="100000"
+        app:progressView_min="0"
+        app:progressView_radius="8dp" />
+
+    <TextView
+        android:id="@+id/proximitySensorText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/proximity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lightBar" />
+
+    <com.skydoves.progressview.ProgressView
+        android:id="@+id/proximityBar"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/proximitySensorText"
+        app:progressView_animation="accelerateDecelerate"
+        app:progressView_autoAnimate="true"
+        app:progressView_colorBackground="@color/grey"
+        app:progressView_colorProgress="?colorPrimary"
+        app:progressView_labelSize="16sp"
+        app:progressView_labelTypeface="bold"
+        app:progressView_max="100"
+        app:progressView_min="0"
+        app:progressView_radius="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

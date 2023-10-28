@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SensorMonitor</string>
+    <string name="sensor_monitor">Sensor Monitor</string>
+    <string name="sensors_available_on_this_phone">Sensors available on this phone</string>
+    <string name="light">Light Sensor: %1$.2f</string>
+    <string name="proximity">Proximity Sensor: %1$.2f</string>
+    <string name="error">No sensor</string>
+</resources>
